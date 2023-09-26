@@ -1,0 +1,82 @@
+<!-- Section: formG -->
+<script type="text/javascript">var submitted=false</script>
+<iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;" 
+  onload="if(submitted){
+    window.location='{{ site.baseurl }}';
+    document.getElementById('formG').classList.add('hidden');
+    document.getElementById('thank-you').classList.remove('hidden');
+  }">
+</iframe>
+
+{% include thank-you.html %}
+
+<section id="formG" class="section scrollspy">
+  <div class="container">
+    <h4 class="center">Please fill in the form to register:</h4>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfTL3EHr9QD0iadIK9pktDj82KAQ_DGXEWEeQORCV2R79Jk0A/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true">
+      <div class="row">
+        <div class="col s12">
+          <div class="input-field">
+            <i class="material-icons prefix text-teal">group</i>
+            <input id="team" type="text" name="{{ site.data.race.team-name }}" class="validate" required="" aria-required="true">
+            <label class="active" for="team">Team Name:</label>
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="input-field">
+            <i class="material-icons prefix text-teal">font_download</i>
+            <select id="raceclass" name="{{ site.data.race.race-class }}" required>
+              <option value="" disabled selected>Class</option>
+              {% for class in site.data.race.classes %} 
+              <option value="{{ class.name }}">{{ class.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Racer # 1 info -->
+        <div class="col m6 indigo lighten-4">
+          <h5>Racer 1:</h5>
+          {% for racer in site.data.race.racer1 %}
+          <div class="input-field">
+            <i class="material-icons prefix text-teal">{{ racer.icon }}</i>
+            <input id="{{ racer.id }}" type="text" name="{{ racer.name }}" {{ racer.req }}>
+            <label class="active" for="{{ racer.id }}">{{ racer.label }}</label>
+          </div>
+          {% endfor %}
+          {% include yes-no-racer-1.html %}
+        </div>
+        <!-- Racer # 2 info -->
+        <div class="col m6 amber lighten-4">
+          <h5>Racer 2:</h5>
+          {% for racer in site.data.race.racer2 %}
+          <div class="input-field">
+            <i class="material-icons prefix text-teal">{{ racer.icon }}</i>
+            <input id="{{ racer.id }}" type="text" name="{{ racer.name }}" {{ racer.req }}>
+            <label class="active" for="{{ racer.id }}">{{ racer.label }}</label>
+          </div>
+          {% endfor %}
+          {% include yes-no-racer-2.html %}
+        </div>
+      </div>
+
+      <div class="row center">
+          <button class="submit-btn btn waves-effect waves-light deep-orange" type="submit" name="action">
+            We accept waiver and fees.<br> Register US!<i class="material-icons right">send</i>
+          </button>
+          <button type="reset" class="btn waves-effect waves-dark">Reset</button>
+          <div id="alert-field" class="alert hidden">
+            <span>
+              <b><p>Please wait while we register you ...</p></b>
+              <progress></progress>
+            </span>
+          </div>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+
+

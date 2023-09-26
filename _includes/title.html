@@ -1,0 +1,21 @@
+<!-- Section: title -->
+<section class="section hero is-warning container">
+   <h1 class="title">{{ page.form_closed | default: page.form_title }}</h1>
+   <h2 class="subtitle is-4">{{ page.location }}
+      <br>
+      {{ page.dates }}
+   </h2>
+   {% if page.form_closed == nil %}
+   <br>
+   <div class="columns is-mobile is-centered">
+      <div class="column">
+         <a href="#waiver" class="button is-primary">Read the waiver</a>
+      </div>
+      <div class="column is-narrow">
+      </div>
+      <div class="column">
+         <a href="#fees" class="button is-info">Read the fees</a>
+      </div>
+   </div>
+   {% endif %}
+</section>

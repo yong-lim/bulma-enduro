@@ -1,0 +1,91 @@
+{% include thank-you.html %}
+
+<section id="form" class="section container has-background-grey-light">
+   <form id="my-form" onsubmit="postEnduro23(event)">
+
+      <div class="field is-horizontal">
+         <div class="field-body">
+            <div class="field">
+               <label class="label">Team Name</label>
+               <p class="control is-expanded has-icons-left">
+                  <input class="input is-info" type="text" name="{{ site.data.race.team-name }}" placeholder="Team Name" required>
+                  <span class="icon is-small is-left">
+                     <i class="fas fa-user-group"></i>
+                  </span>
+               <p class="help is-danger">
+                  This field is required
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="field is-horizontal">
+         <div class="select is-info">
+            <select id="raceclass" name="{{ site.data.race.race-class }}" required>
+               <option value="" disabled selected>Select your race class</option>
+               {% for class in site.data.race.classes %}
+               <option value="{{ class.name }}">{{ class.name }}</option>
+               {% endfor %}
+            </select>
+         </div>
+      </div>
+
+      {% for racers in site.data.race.racers %}
+      <div class="field is-horizontal">
+         <div class="field-body">
+            <div class="field">
+               <label class="label">{{ racers.label }}</label>
+               <p class="control is-expanded has-icons-left">
+                  <input class="input is-info" type="text" name="{{ racers.name }}" placeholder="{{ racers.label }}" required>
+                  <span class="icon is-small is-left">
+                     <i class="fas {{ racers.icon }}"></i>
+                  </span>
+               </p>
+               <p class="help is-danger">
+                  This field is required
+               </p>
+            </div>
+            <div class="field">
+               <label class="label">{{ racers.label2 }}</label>
+               <p class="control is-expanded has-icons-left">
+                  <input class="input is-success" type="text" name="{{ racers.name2 }}"
+                     placeholder="{{ racers.label2 }}" />
+                  <span class="icon is-small is-left">
+                     <i class="fas {{ racers.icon2 }}"></i>
+                  </span>
+               </p>
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+
+      <div class="field is-horizontal">
+         <div class="field-body">
+            <div class="field">
+               {% include yes-no-racer-1.html %}
+            </div>
+            <div class="field">
+               {% include yes-no-racer-2.html %}
+            </div>
+         </div>
+      </div>
+
+      <div class="field">
+         <div class="control">
+            <label class="checkbox">
+               <input type="checkbox" required>
+               I agree to the <a href="#fees">fees and waiver conditions below.</a>
+            </label>
+         </div>
+      </div>
+
+      <div class="field is-grouped">
+         <div class="control">
+            <button class="button is-link">Submit</button>
+         </div>
+         <div class="control">
+            <button class="button is-link is-light">Cancel</button>
+         </div>
+      </div>
+   </form>
+</section>

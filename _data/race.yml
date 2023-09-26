@@ -1,0 +1,145 @@
+fees_reg: |
+  **Registration Fees**
+  {: .title .is-3 .has-text-centered}
+  Please come to the official booth to get your racing numbers.
+  <br>
+  See you at the race!! You may make your payment below. . .
+  {: .subtitle .is-5}
+
+fees_2r: |
+  **Enduro only or Enduro + Hill climb:**
+  {: .subtitle .is-5}
+  - Adult $35 per racer
+  - Kids $20 per racer
+  - PeeWee FREE 
+
+fees_1r: |
+  **Hill climb only:**
+  {: .subtitle .is-5}
+  - Adult $20 per racer
+  - Kids $10 per racer
+
+paid-for: |
+  ---
+  ##### Enduro Race fee includs: 
+  1. Race entry for Enduro and Hill Climb      
+  2. T-shirt Enduro race       
+  3. Food      
+  4. Insurance Enduro race       
+  5. Water for Enduro race
+
+  ##### Hill Climb Race Fee Includes:
+  1. Race entry Hill Climb
+
+waiver: |
+  **Racer acknowledgment / Waiver**
+  {: .title .is-3 .has-text-centered}
+  Your registraction for this race is your consent electronic signature.
+  Please be informed: Participation in the November 11, 2023 King of the Hill and
+  November 12, 2023 Enduro Challenge can involve risk of injury, serious injury or
+  death, property damage, and other dangers associated with outdoor activities and motor racing.
+  {: .subtitle .is-5}
+
+waiver_points: |
+  **By paying for this race, you agree that:**
+  {: .subtitle .is-5}
+  - That your participation in the races as mentioned above are by your own choice.
+  - That you understand and accept the risk involved in participating in the above-mentioned races.
+  - That you have been given time to test both race tracks by foot or by motorcycle.
+  - That you are physically fit and able to participate in the above-mentioned races.
+  - That you agree to hold the CMSF, Local Authorities and the Organizer harmless against all claims of damage to body and or property.
+  - That the CMSF, Local Authorities and Organizer maintains the right to refuse participation to any racer if they foresee that participation would risk damage to any party.
+  
+  **For racers under the age of 18 please pay by the parent.**
+
+team-name: "entry.756253663"
+
+racers:
+  - icon   : "fa-user"
+    icon2  : "fa-user"
+    id     : "name1"
+    id2    : "name1"
+    name   : "entry.316818058"
+    name2  : "entry.15140904"
+    label  : "Race 1 Name:"
+    label2 : "Race 2 Name:"
+  - icon   : "fa-phone"
+    icon2  : "fa-phone"
+    id     : "phone1"
+    id2    : "phone2"
+    name   : "entry.261002137"
+    name2  : "entry.1061090279"
+    label  : "Race 1 Phone #:"
+    label2 : "Race 2 Phone #:"
+  - icon   : "fa-truck-medical"
+    icon2  : "fa-truck-medical"
+    id     : "emergency1"
+    id2    : "emergency2"
+    name   : "entry.1294814802"
+    name2  : "entry.960209371"
+    label  : "Race 1 phone # for emergency:"
+    label2 : "Race 2 phone # for emergency:"
+    
+racer1:
+  - icon  : "account_circle"
+    id    : "name1"
+    name  : "entry.316818058"
+    label : "Race 1 Name:"
+    req   : "class='validate' required='true' aria-required='true'"
+  - icon  : "phone"
+    id    : "phone1"
+    name  : "entry.261002137"
+    label : "Race 1 Phone #:"
+    req   : "class='validate' required='true' aria-required='true'"
+  - icon  : "local_hospital"
+    id    : "emergency1"
+    name  : "entry.1294814802"
+    label : "Race 1 phone # for emergency:"
+
+racer2:
+  - icon  : "account_circle"
+    id    : "name2"
+    name  : "entry.15140904"
+    label : "Name:"
+  - icon  : "phone"
+    id    : "phone2"
+    name  : "entry.1061090279"
+    label : "Phone:"
+  - icon  : "local_hospital"
+    id    : "emergency2"
+    name  : "entry.960209371"
+    label : "Phone for emergency:"
+      
+radio1:
+  - icon  : "account_circle"
+    id    : "name1"
+    label : "Name:"
+ 
+race-class: "entry.1266295615"
+classes:
+  - name : "Class A (Pro Racer)" 
+  - name : "Class B (Semi-Pro Racer)"  
+  - name : "Class C (Novice racer)"
+  - name : "Class M (Masters 40Y up)"
+  - name : "Class LEC (Ladies)"
+  - name : "Class D (Kids)"
+  - name : "Class E (PeeWee)"
+  - name : "Trial Masters (Trial Bike Only)"
+
+r1-hill: "entry.2131610651"
+r1-endu: "entry.1760404173"
+r2-hill: "entry.69002109"
+r2-endu: "entry.1913362904"
+
+pay: |
+  **MAKE PAYMENT**
+  {: .title .is-4}
+  After you have made your payment, please send us your prove of payment receipt 
+  plus what team or racer you are paying for to Sharon: 
+
+  **WhatsApp or Telegram:**
+    <br>
+  **+855 12 374 623**
+
+pay_QR: |
+  [![ABA](assets/img/Sharon-ABA-xxsm.jpg){: class=""}](https://pay.ababank.com/DeMLkg72wCHVg2gQ7)

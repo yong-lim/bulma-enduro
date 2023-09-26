@@ -1,0 +1,18 @@
+title: Enduro 2023
+
+timezone: Asai/Phnom_Penh
+markdown: kramdown
+highlighter: rouge
+lsi: false
+description: your resume
+baseurl: ""
+url: ""
+color: "#f2f2f2"
+
+# plugins:
+#   - jekyll-spaceship
+    
+exclude:
+  - README.md
+  - LICENSE
+
