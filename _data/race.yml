@@ -131,7 +131,7 @@ r1-endu: "entry.1760404173"
 r2-hill: "entry.69002109"
 r2-endu: "entry.1913362904"
 
-pay: |
+payment: |
   **MAKE PAYMENT**
   {: .title .is-4}
   After you have made your payment, please send us your prove of payment receipt 
@@ -141,5 +141,5 @@ pay: |
     <br>
   **+855 12 374 623**
 
-pay_QR: |
+payment_QR: |
   [![ABA](assets/img/Sharon-ABA-xxsm.jpg){: class=""}](https://pay.ababank.com/DeMLkg72wCHVg2gQ7)
