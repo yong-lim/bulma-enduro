@@ -9,7 +9,7 @@ $(function() {
  }
  
  //selector from your HTML form
- function postEnduro23(e) {
+ function postEnduro(e) {
    //prevent the form from submiting so we can post to the google form
    e.preventDefault();
    console.log("in postEnduro23");
@@ -28,7 +28,9 @@ $(function() {
          //success
          $('#thank-you').removeClass("hidden");
          $('#form').addClass("hidden");
+         $('#title').addClass("hidden");
          $('#alert-field').addClass('hidden');
+         $('#backtop').click();
        }, 
        200: function(data) {//200 is a success code. it went through!
          //success
