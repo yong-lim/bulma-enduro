@@ -46,9 +46,6 @@ $(document).ready(function () {
     $('#form').addClass("hidden");
   });
 
-  $('.materialboxed').materialbox();
-  $('.scrollspy').scrollSpy();
-
   changeColor();
 });
 
