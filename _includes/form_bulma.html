@@ -6,9 +6,11 @@
       <div class="field is-horizontal">
          <div class="field-body">
             <div class="field">
-               <label class="label">Team Name</label>
+               <label class="label">{{ site.data.race.team-label }}</label>
                <p class="control is-expanded has-icons-left">
-                  <input class="input is-info" type="text" name="{{ site.data.race.team-name }}" placeholder="Team Name" required>
+                  <input class="input is-info" type="text" 
+                     name="{{ site.data.race.team-name }}" 
+                     placeholder="{{ site.data.race.team-label }}" required>
                   <span class="icon is-small is-left">
                      <i class="fas fa-user-group"></i>
                   </span>

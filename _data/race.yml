@@ -52,7 +52,8 @@ waiver_points: |
   
   **For racers under the age of 18 please pay by the parent.**
 
-team-name: "entry.756253663"
+team-label : "Team Name"
+team-name  : "entry.756253663"
 
 racers:
   - icon   : "fa-user"
