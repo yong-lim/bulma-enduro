@@ -1,11 +1,7 @@
-title : "Hanuman Offroad Challenge 2023"
-banner: "assets/img/Enduro-2023-Nov.jpg"
-
 timezone: Asai/Phnom_Penh
 markdown: kramdown
 highlighter: rouge
 lsi: false
-description: your resume
 baseurl: ""
 url: ""
 color: "#f2f2f2"
