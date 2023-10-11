@@ -1,0 +1,98 @@
+<section class="container">
+  <div id="time">
+    <div class="circle" style="--clr:#ffffff;">
+      <div class="dots day_dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="dd"></circle>
+      </svg>
+      <div id="days">00<br><span>Days</span></div>
+    </div>
+
+    <div class="circle" style="--clr:#ff2972;">
+      <div class="dots hr_dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="hh"></circle>
+      </svg>
+      <div id="hours">00</div>
+    </div>
+
+    <div class="circle" style="--clr:#fee800;">
+      <div class="dots min_dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="mm"></circle>
+      </svg>
+      <div id="minutes">00</div>
+    </div>
+
+    <div class="circle" style="--clr:#04fc43;">
+      <div class="dots sec_dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+        <circle cx="70" cy="70" r="70" id="ss"></circle>
+      </svg>
+      <div id="seconds">00</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let days = document.getElementById('days');
+  let hours = document.getElementById('hours');
+  let minutes = document.getElementById('minutes');
+  let seconds = document.getElementById('seconds');
+
+  let dd = document.getElementById('dd');
+  let hh = document.getElementById('hh');
+  let mm = document.getElementById('mm');
+  let ss = document.getElementById('ss');
+
+  let day_dot = document.querySelector('.day_dot');
+  let hr_dot = document.querySelector('.hr_dot');
+  let min_dot = document.querySelector('.min_dot');
+  let sec_dot = document.querySelector('.sec_dot');
+
+  let raceDate= new Date("Nov 11, 2023 08:30:00 GMT+0700").getTime();
+
+  let x = setInterval(function(){
+    let now = new Date().getTime();
+    let distance = raceDate - now;
+
+    //time calculation for remaining days,hours, seconds
+    let d = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let m = Math.floor((distance % (1000 * 60 * 60))      / (1000 * 60));
+    let s = Math.floor((distance % (1000 * 60))           / (1000));
+
+    //lets output the result in the elements with id 
+    days.innerHTML = d + "<br><span>Days</span>";
+    hours.innerHTML = h + "<br><span>Hours</span>";
+    minutes.innerHTML = m + "<br><span>Minutes</span>";
+    seconds.innerHTML = s + "<br><span>Seconds</span>";
+
+    //lets animate stroke
+    dd.style.strokeDashoffset = 440 - (440 * d) / 365;
+    hh.style.strokeDashoffset = 440 - (440 * h) / 24;
+    mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+    ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+
+    //lets animate circle dots
+    //360deg / 365 days = 0.986
+    day_dot.style.transform = `rotateZ(${d * 0.986}deg)`;
+    //360deg / 24 hrs = 15
+    hr_dot.style.transform = `rotateZ(${h * 15}deg)`;
+    //360deg / 60 minutes = 6
+    min_dot.style.transform = `rotateZ(${m * 6}deg)`;
+    //360deg / 60 seconds = 6
+    sec_dot.style.transform = `rotateZ(${s * 6}deg)`;
+
+    //write some text if countdown is over
+    if(distance < 0) {
+      clearInterval(x);
+      document.getElementById("time").innerHTML = 
+        "<h1 class='title has-text-white'>LET'S GO RACING!!!</h1>";
+    }
+  }, 1000);
+</script>

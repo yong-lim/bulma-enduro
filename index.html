@@ -11,13 +11,11 @@ dates      : "Enduro Race November 11-12, 2023"
 ---
 
 {% include hero.html %}
-{% include countdown.html %}
+{% include cc.html %}
 {% include title.html %}
 
 {% if page.form_closed %}
-  {% include countdown.html %}
-  <!-- load the js only if using countdown.html -->
-  <script type="text/javascript" src="{{ 'assets/js/countdown.js' | relative_url }}"></script>
+  {% include cc.html %}
 {% else %}
   {% include form_bulma.html %}
   {% include fees.html %}
