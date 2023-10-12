@@ -1,40 +1,49 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 11, 2023 07:59:59 GMT+0700").getTime();
+const raceDate= new Date("Nov 11, 2023 08:30:00 GMT+0700").getTime();
 
-function addZero(num){
-   if (num < 10){
-      num = "0" + num;
-      return num;
-   } else {
-     return num;
-   }
-}
+const x = setInterval(function() {
+  const now = new Date().getTime();
+  const gap = raceDate - now;
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+  const second = 1000;
+  const minute = second * 60;
+  const hour   = minute * 60;
+  const day    = hour * 24; 
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days    = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours   = addZero(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-  var minutes = addZero(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-  var seconds = addZero(Math.floor((distance % (1000 * 60)) / 1000));
-    
-  // Output the result in an element with id="demo"
-  var show_time = document.getElementById("counter");
-  show_time.innerHTML = days + " days " + " - " + 
-     + hours + " : "
-     + minutes +  " : "
-     + seconds + " hours";
-    
+  //time calculation for remaining days,hours, seconds
+  let dd = Math.floor(gap / day);
+  let hh = Math.floor((gap % day) / hour);
+  let mm = Math.floor((gap % hour) / minute);
+  let ss = Math.floor((gap % minute) / second);
+
+  // add leading 0 to single digits
+  hh < 10 ? hh = "0" + hh : hh = hh;
+  mm < 10 ? mm = "0" + mm : mm = mm;
+  ss < 10 ? ss = "0" + ss : ss = ss;
+
+  if (document.getElementById('dd')) 
+    document.getElementById('dd').innerHTML = `${dd}`;
+  if (document.getElementById('hh')) 
+    document.getElementById('hh').innerHTML = `${hh}`;
+  if (document.getElementById('mm')) 
+    document.getElementById('mm').innerHTML = `${mm}`;
+  if (document.getElementById('ss')) 
+    document.getElementById('ss').innerHTML = `${ss}`;
+
+  if (document.getElementById('cd-time')) 
+    document.getElementById('cd-time').innerText =
+      dd + " days " + " - " + 
+      hh + " : " + mm +  " : " + ss + " hours";
+
   // If the count down is over, write some text 
-  if (distance < 0) {
+  if (gap < 0) {
     clearInterval(x);
-    document.getElementById("counter").innerHTML = "RACING!!!";
+    if (document.getElementById('cd-time')) 
+      document.getElementById("cd-time").innerText = 
+        "LET'S GO RACING!!!";
+    if (document.getElementById('countdown')) 
+      document.getElementById('countdown').classList.add('hidden');
+    // if (document.getElementById('cd-time')) 
+    //   document.getElementById('cd-time').innerHTML=`${txt}`;
   }
 }, 1000);
