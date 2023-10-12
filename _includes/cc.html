@@ -1,19 +1,20 @@
+ <link rel="stylesheet" href="{{ 'assets/css/countdown_circle.css' | relative_url }}">
+
 <section class="container">
   <div id="time">
     <div class="circle" style="--clr:#ffffff;">
       <div class="dots day_dot"></div>
       <svg>
-        <circle cx="70" cy="70" r="70"></circle>
-        <circle cx="70" cy="70" r="70" id="dd"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50" id="dd"></circle>
       </svg>
       <div id="days">00<br><span>Days</span></div>
     </div>
-
     <div class="circle" style="--clr:#ff2972;">
       <div class="dots hr_dot"></div>
       <svg>
-        <circle cx="70" cy="70" r="70"></circle>
-        <circle cx="70" cy="70" r="70" id="hh"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50" id="hh"></circle>
       </svg>
       <div id="hours">00</div>
     </div>
@@ -21,21 +22,19 @@
     <div class="circle" style="--clr:#fee800;">
       <div class="dots min_dot"></div>
       <svg>
-        <circle cx="70" cy="70" r="70"></circle>
-        <circle cx="70" cy="70" r="70" id="mm"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50" id="mm"></circle>
       </svg>
       <div id="minutes">00</div>
     </div>
-
     <div class="circle" style="--clr:#04fc43;">
       <div class="dots sec_dot"></div>
       <svg>
-        <circle cx="70" cy="70" r="70"></circle>
-        <circle cx="70" cy="70" r="70" id="ss"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50" id="ss"></circle>
       </svg>
       <div id="seconds">00</div>
-    </div>
-  </div>
+   </div>
 </section>
 
 <script>
@@ -73,10 +72,10 @@
     seconds.innerHTML = s + "<br><span>Seconds</span>";
 
     //lets animate stroke
-    dd.style.strokeDashoffset = 440 - (440 * d) / 365;
-    hh.style.strokeDashoffset = 440 - (440 * h) / 24;
-    mm.style.strokeDashoffset = 440 - (440 * m) / 60;
-    ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+    dd.style.strokeDashoffset = 314 - (314 * d) / 365;
+    hh.style.strokeDashoffset = 314 - (314 * h) / 24;
+    mm.style.strokeDashoffset = 314 - (314 * m) / 60;
+    ss.style.strokeDashoffset = 314 - (314 * s) / 60;
 
     //lets animate circle dots
     //360deg / 365 days = 0.986
