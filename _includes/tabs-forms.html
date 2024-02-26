@@ -1,0 +1,79 @@
+<!--- tabs-forms -->
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+        <h1 class="title">
+          Team Registration Forms
+        </h1>
+      </div>
+  </div> 
+  
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth is-medium">
+      <div class="container">
+        <ul>
+          <li class="tab is-active" onclick="openTab(event,'TeamA')"><a >Team A</a></li>
+          <li class="tab" onclick="openTab(event,'TeamB')"><a >Team B</a></li>
+          <li class="tab" onclick="openTab(event,'TeamC')"><a >Team C</a></li>
+          <li class="tab" onclick="openTab(event,'Master')"><a >Master</a></li>
+          <li class="tab" onclick="openTab(event,'Ladies')"><a >Ladies</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<div class="container section">
+    <div id="TeamA" class="content-tab" >
+      <h2 class="subtitle is-4">
+        You are registrating for Team A<br>
+      </h2>
+      {% include form-r2.html %}
+    </div>
+
+    <div id="TeamB" class="content-tab" style="display:none">
+      <h2 class="subtitle is-4">
+        You are registrating for Team B<br>
+      </h2>
+      {% include form-r3.html %}
+    </div>
+
+    <div id="TeamC" class="content-tab" style="display:none">
+      <h2 class="subtitle is-4">
+        You are registrating for Team C<br>
+      </h2>
+      {% include form-r3.html %}
+    </div>
+
+    <div id="Master" class="content-tab" style="display:none">
+      <h2 class="subtitle is-4">
+        You are registrating for Master Class<br>
+      </h2>
+      {% include form-r1.html %}
+    </div>
+
+    <div id="Ladies" class="content-tab" style="display:none">
+      <h2 class="subtitle is-4">
+        You are registrating for Ladies Class<br>
+      </h2>
+      {% include form-r1.html %}
+    </div>
+
+</div>
+
+    
+<script>
+function openTab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("content-tab");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " is-active";
+}
+</script>
