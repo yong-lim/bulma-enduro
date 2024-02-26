@@ -1,13 +1,13 @@
 ---
-layout: default
-title      : "Hanuman Offroad Challenge 2023"
+layout     : base
+title      : "Hanuman Offroad Challenge 2024"
 banner     : "assets/img/Enduro-2023.jpg"
 form_title : Online Registration Form
 location   : "Location: Phnum Basseth, Kingdom of Cambodia"
-dates      : "Enduro Race November 11-12, 2023"
+date       : "Enduro Race March 10, 2024"
 
-form_closed: Online Registration is Closed
-#on_site_reg: Please register at the race site
+# form_closed: Online Registration is Closed
+# on_site_reg: Please register at the race site
 ---
 
 {% include hero.html %}
@@ -17,7 +17,7 @@ form_closed: Online Registration is Closed
 {% if page.form_closed %}
   {% include cc.html %}
 {% else %}
-  {% include form_bulma.html %}
+  {% include tabs-forms.html %}
   {% include fees.html %}
   {% include waiver.html %}
   {% include payment.html %}
