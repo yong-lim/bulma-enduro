@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const raceDate= new Date("Nov 11, 2023 08:30:00 GMT+0700").getTime();
+const raceDate= new Date("Mar 10, 2024 08:30:00 GMT+0700").getTime();
 
 const x = setInterval(function() {
   const now = new Date().getTime();
