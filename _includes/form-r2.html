@@ -3,18 +3,18 @@
 
    function formReset() {
 
-     $('#alert-field')
-       .removeClass()
-       .html("<span><p>Thank you for getting in touch with us . . .</p></span>")
-       .removeClass('hidden');
+      document.querySelectorAll('#alert-field').forEach(function (el, index) {
+         el.innHTML = "<span> <b><p>Please wait while we register you ...</p></b> <progress></progress> </span>";
+         el.classList.remove('is-hidden');
+      });
      setTimeout(() => {
-       $('#alert-field').removeClass().addClass('hidden');
-        document.getElementById("formID").reset();
-       $('#formID').removeClass().addClass('is-hidden');
+       // $('#alert-field').removeClass().addClass('is-hidden');
+       // document.getElementById("formID").reset();
+       // $('#formID').removeClass().addClass('is-hidden');
        $('#tabs-forms').removeClass().addClass('is-hidden');
        $('#thank-you').removeClass('is-hidden');
        // console.log('This alert appeared after 3 second!'); 
-     }, 3000);
+     }, 1500);
 }
 
 </script>
@@ -102,7 +102,7 @@
          <div class="control">
             <label class="checkbox">
                <input type="checkbox" required>
-               I agree to the <a href="#fees">fees and waiver conditions below.</a>
+               I agree to the fees and waiver conditions below.
             </label>
          </div>
       </div>
@@ -113,10 +113,10 @@
          </div>
       </div>
 
-      <div id="alert-error" class="alert hidden">
+      <div id="alert-error" class="alert is-hidden">
          <p>Uh oh! Something went wrong!</p>
       </div>
-      <div id="alert-field" class="alert hidden">
+      <div id="alert-field" class="alert is-hidden">
          <span>
            <b><p>Please wait while we register you ...</p></b>
            <progress></progress>
