@@ -1,20 +1,26 @@
-<script type="text/javascript">var submitted=false</script>
-<iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;" 
-  onload="if(submitted){
-   document.getElementById('alert-field')
-    .removeClass()
-    .html('<span><p>Thank you for getting in touch with us . . .</p></span>')
-    .removeClass('hidden');
-   document.getElementById('formID').reset();
-  setTimeout(() => {
-    $('#alert-field').removeClass().addClass('is-hidden');
-    console.log('This alert appeared after 3 second!'); 
-  }, 3000);
-  }">
-</iframe>
-
 <section id="form" class="section container has-background-grey-light">
-   <form id="formID" action="https://docs.google.com/forms/d/e/1FAIpQLSdjE2CZESC7JqVlE3qSD5lT9rkSszzwi_E2JlAu7YbJ5BNOjg/formResponse" method="post" onsubmit="return formReset()">
+   <form id="formID" action="https://docs.google.com/forms/d/e/1FAIpQLSdjE2CZESC7JqVlE3qSD5lT9rkSszzwi_E2JlAu7YbJ5BNOjg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true; return formReset();">
+
+      <p class="is-hidden">
+         <input class="" type="text" name="entry.817453645" 
+            placeholder="Class C" value="Class C" />
+      </p>
+
+      <div class="field is-horizontal">
+         <div class="field-body">
+            <div class="field">
+               <label class="label">Team Name</label>
+               <p class="control is-expanded has-icons-left">
+                  <input class="input is-info" type="text" 
+                     name="entry.726004286" 
+                     placeholder="Team Name" required>
+                  <span class="icon is-small is-left">
+                     <i class="fas fa-user-group"></i>
+                  </span>
+               </p>
+            </div>
+         </div>
+      </div>
 
       <div class="field is-horizontal">
          <div class="field-body">
@@ -22,6 +28,31 @@
                <label class="label">Name of Racer 1</label>
                <p class="control is-expanded has-icons-left">
                   <input class="input is-info" type="text" name="entry.959984559" placeholder="Name of Racer 1" required />
+                  <span class="icon is-small is-left">
+                     <i class="fas fa-user"></i>
+                  </span>
+               </p>
+            </div>
+            <div class="field">
+               <label class="label">Name of Racer 2</label>
+               <p class="control is-expanded has-icons-left">
+                  <input class="input is-success" type="text" name="entry.768618346"
+                     placeholder="Name of Racer 2" required />
+                  <span class="icon is-small is-left">
+                     <i class="fas fa-user"></i>
+                  </span>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="field is-horizontal">
+         <div class="field-body">
+            <div class="field">
+               <label class="label">Name of Racer 3</label>
+               <p class="control is-expanded has-icons-left">
+                  <input class="input is-success" type="text" name="entry.515811125"
+                     placeholder="Name of Racer 3" required />
                   <span class="icon is-small is-left">
                      <i class="fas fa-user"></i>
                   </span>
@@ -69,16 +100,15 @@
          </div>
       </div>
 
-      <div id="alert-error" class="alert is-hidden">
+      <div id="alert-error" class="alert hidden">
          <p>Uh oh! Something went wrong!</p>
       </div>
-      <div id="alert-field" class="alert is-hidden">
+      <div id="alert-field" class="alert hidden">
          <span>
-            <b><p>Please wait while we register you ...</p></b>
-            <progress></progress>
+           <b><p>Please wait while we register you ...</p></b>
+           <progress></progress>
          </span>
       </div>
 
    </form>
 </section>
-

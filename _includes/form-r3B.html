@@ -1,37 +1,9 @@
-<script type="text/javascript">
-   var submitted=false;
-
-   function formReset() {
-
-     $('#alert-field')
-       .removeClass()
-       .html("<span><p>Thank you for getting in touch with us . . .</p></span>")
-       .removeClass('hidden');
-     setTimeout(() => {
-       $('#alert-field').removeClass().addClass('hidden');
-        document.getElementById("formID").reset();
-       $('#formID').removeClass().addClass('is-hidden');
-       $('#tabs-forms').removeClass().addClass('is-hidden');
-       $('#thank-you').removeClass('is-hidden');
-       // console.log('This alert appeared after 3 second!'); 
-     }, 3000);
-}
-
-</script>
-<iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;" 
-  onload="if(submitted){ }">
-</iframe>
-
 <section id="form" class="section container has-background-grey-light">
    <form id="formID" action="https://docs.google.com/forms/d/e/1FAIpQLSdjE2CZESC7JqVlE3qSD5lT9rkSszzwi_E2JlAu7YbJ5BNOjg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted=true; return formReset();">
 
-      <p class="control is-expanded has-icons-left is-hidden">
-         <input class="input is-info" type="text" 
-            name="entry.817453645" 
-            placeholder="Class A" value="Class A" />
-         <span class="icon is-small is-left">
-            <i class="fas fa-user-group"></i>
-         </span>
+      <p class="is-hidden">
+         <input class="" type="text" name="entry.817453645" 
+            placeholder="Class B" value="Class B" />
       </p>
 
       <div class="field is-horizontal">
@@ -41,7 +13,7 @@
                <p class="control is-expanded has-icons-left">
                   <input class="input is-info" type="text" 
                      name="entry.726004286" 
-                     placeholder="Team Name" required />
+                     placeholder="Team Name" required>
                   <span class="icon is-small is-left">
                      <i class="fas fa-user-group"></i>
                   </span>
@@ -66,6 +38,21 @@
                <p class="control is-expanded has-icons-left">
                   <input class="input is-success" type="text" name="entry.768618346"
                      placeholder="Name of Racer 2" required />
+                  <span class="icon is-small is-left">
+                     <i class="fas fa-user"></i>
+                  </span>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="field is-horizontal">
+         <div class="field-body">
+            <div class="field">
+               <label class="label">Name of Racer 3</label>
+               <p class="control is-expanded has-icons-left">
+                  <input class="input is-success" type="text" name="entry.515811125"
+                     placeholder="Name of Racer 3" required />
                   <span class="icon is-small is-left">
                      <i class="fas fa-user"></i>
                   </span>

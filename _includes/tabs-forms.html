@@ -1,5 +1,8 @@
 <!--- tabs-forms -->
-<section class="hero is-success">
+
+{% include thank-you.html %}
+
+<section id='tabs-forms' class="hero is-success">
   <div class="hero-body">
     <div class="container has-text-centered">
         <h1 class="title">
@@ -12,54 +15,56 @@
     <nav class="tabs is-boxed is-fullwidth is-medium">
       <div class="container">
         <ul>
-          <li class="tab is-active" onclick="openTab(event,'TeamA')"><a >Team A</a></li>
-          <li class="tab" onclick="openTab(event,'TeamB')"><a >Team B</a></li>
-          <li class="tab" onclick="openTab(event,'TeamC')"><a >Team C</a></li>
-          <li class="tab" onclick="openTab(event,'Master')"><a >Master</a></li>
+          <li class="tab is-active" onclick="openTab(event,'Class A')"><a >Class A</a></li>
+          <li class="tab" onclick="openTab(event,'Class B')">
+            <a>Class B</a>
+          </li>
+          <li class="tab" onclick="openTab(event,'Class C')"><a >Class C</a></li>
+          <li class="tab" onclick="openTab(event,'Masters')"><a >Masters</a></li>
           <li class="tab" onclick="openTab(event,'Ladies')"><a >Ladies</a></li>
         </ul>
       </div>
     </nav>
   </div>
+  <div class="container section has-text-left">
+      <div id="Class A" class="content-tab" >
+        <h2 class="subtitle is-4">
+          You are registrating for Class A<br>
+        </h2>
+        {% include form-r2.html %}
+      </div>
+
+      <div id="Class B" class="content-tab" style="display:none">
+        <h2 class="subtitle is-4">
+          You are registrating for Class B<br>
+        </h2>
+        {% include form-r3B.html %}
+      </div>
+
+      <div id="Class C" class="content-tab" style="display:none">
+        <h2 class="subtitle is-4">
+          You are registrating for Class C<br>
+        </h2>
+        {% include form-r3C.html %}
+      </div>
+
+      <div id="Masters" class="content-tab" style="display:none">
+        <h2 class="subtitle is-4">
+          You are registrating for Masters Class<br>
+        </h2>
+        {% include form-r1M.html %}
+      </div>
+
+      <div id="Ladies" class="content-tab" style="display:none">
+        <h2 class="subtitle is-4">
+          You are registrating for Ladies Class<br>
+        </h2>
+        {% include form-r1L.html %}
+      </div>
+
+  </div>
+
 </section>
-
-<div class="container section">
-    <div id="TeamA" class="content-tab" >
-      <h2 class="subtitle is-4">
-        You are registrating for Team A<br>
-      </h2>
-      {% include form-r2.html %}
-    </div>
-
-    <div id="TeamB" class="content-tab" style="display:none">
-      <h2 class="subtitle is-4">
-        You are registrating for Team B<br>
-      </h2>
-      {% include form-r3.html %}
-    </div>
-
-    <div id="TeamC" class="content-tab" style="display:none">
-      <h2 class="subtitle is-4">
-        You are registrating for Team C<br>
-      </h2>
-      {% include form-r3.html %}
-    </div>
-
-    <div id="Master" class="content-tab" style="display:none">
-      <h2 class="subtitle is-4">
-        You are registrating for Master Class<br>
-      </h2>
-      {% include form-r1.html %}
-    </div>
-
-    <div id="Ladies" class="content-tab" style="display:none">
-      <h2 class="subtitle is-4">
-        You are registrating for Ladies Class<br>
-      </h2>
-      {% include form-r1.html %}
-    </div>
-
-</div>
 
     
 <script>
