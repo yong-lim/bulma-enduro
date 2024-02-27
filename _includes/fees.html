@@ -6,8 +6,10 @@
       <blockquote>
          {{ site.data.race.fees_2r | markdownify }}
       </blockquote>
+      {% if (site.data.race.fees_1r) %}
       <blockquote>
          {{ site.data.race.fees_1r | markdownify }}
       </blockquote>
+      {% endif %}
    </div>
 </section>
