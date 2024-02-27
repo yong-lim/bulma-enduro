@@ -1,7 +1,7 @@
 ---
 layout     : base
 title      : "Hanuman Offroad Challenge 2024"
-banner     : "assets/img/Enduro-2023.jpg"
+banner     : "assets/img/banner-Mar-10-2024.jpg"
 form_title : Online Registration Form
 location   : "Location: Phnum Basseth, Kingdom of Cambodia"
 date       : "Enduro Race March 10, 2024"
