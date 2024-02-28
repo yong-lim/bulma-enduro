@@ -1,9 +1,9 @@
 ---
 layout     : base
 title      : "Team Challenge Friendship Race"
-banner     : "assets/img/banner-Mar-10-2024.jpg"
+banner     : "assets/img/banner.jpg"
 form_title : Online Registration Form
-location   : "Location: Siem Reap, Kingdom of Cambodia"
+location   : "Location: LS2 Siem Reap, Kingdom of Cambodia"
 date       : "Enduro Race March 9, 2024"
 
 # form_closed: Online Registration is Closed
